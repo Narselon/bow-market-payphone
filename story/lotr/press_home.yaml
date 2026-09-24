@@ -1,0 +1,9 @@
+id: "press_home"
+text: "ride the pony"
+connections: {}
+hidden_connections:
+  "timeout": "hub"
+  "default": "hub"
+items_granted: ["ring"]
+items_required: []
+timeout_after_audio: true 

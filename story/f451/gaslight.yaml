@@ -1,0 +1,9 @@
+id: "gaslight"
+text: "Nothing? What do take me for"
+connections: {}
+hidden_connections:
+  "0": "hub"
+  "451": "451"
+  "default": "wrong_code"
+items_granted: []
+items_required: []

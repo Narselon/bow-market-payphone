@@ -1,0 +1,8 @@
+id: "not_much_choice"
+text: "riddle"
+connections: 
+  1: ["riddle", "riddle", []]
+hidden_connections:
+  "0": "hub"
+items_granted: []
+items_required: []

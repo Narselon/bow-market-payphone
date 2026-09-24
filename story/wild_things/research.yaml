@@ -1,0 +1,11 @@
+id: "research"
+text: "1 home. 2 adventure 3 sand"
+connections:
+  1: ["home", "home", []]
+  2: ["adventure", "adventure", []]
+  3: ["sand", "sand", []]
+hidden_connections:
+  "0": "hub"
+  "skip": "scene3"
+items_granted: []
+items_required: []

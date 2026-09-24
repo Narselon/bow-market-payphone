@@ -1,0 +1,12 @@
+id: "rumpus"
+text: "1. Stop rumpus. 2. Join party"
+connections:
+  1: ["Stop rumpus", {
+    "sand": "stop_rumpusand",
+    "default": "stop_rumpus"
+  }]
+  2: ["Join party", "party", []]
+hidden_connections:
+  "0": "hub"
+items_granted: []
+items_required: []

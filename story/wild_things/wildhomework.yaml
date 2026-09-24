@@ -1,0 +1,9 @@
+id: "wildhomework"
+text: "wild thing limits"
+connections: {}
+hidden_connections:
+  timeout: "hub"
+  default: "hub"
+timeout_after_audio: true
+items_granted: []
+items_required: []

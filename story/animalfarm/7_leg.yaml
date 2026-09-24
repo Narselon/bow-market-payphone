@@ -1,0 +1,17 @@
+id: "7_leg"
+text: "wrong try again"
+connections:
+  1: ["1_leg", "1_leg", []]
+  2: ["2_leg", "2_leg", []]
+  3: ["3_leg", "3_leg", []]
+  4: ["4_leg", "4_leg", []]
+  5: ["5_leg", "5_leg", []]
+  6: ["6_leg", "6_leg", []]
+  7: ["7_leg", "7_leg", []]
+  8: ["8_leg", "8_leg", []]
+  9: ["9_leg", "9_leg", []]
+hidden_connections:
+  "0": "hub"
+  "skip": "scene3"
+items_granted: []
+items_required: []

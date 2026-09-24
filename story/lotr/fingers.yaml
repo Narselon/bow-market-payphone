@@ -1,0 +1,9 @@
+id: "fingers"
+text: "travel with radagast or go home"
+connections: 
+  1: ["radagast", "radagast", []]
+  2: ["go_home", "go_home", []]
+hidden_connections:
+  "0": "hub"
+items_granted: []
+items_required: []

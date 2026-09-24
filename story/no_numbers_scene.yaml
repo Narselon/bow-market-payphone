@@ -1,0 +1,6 @@
+id: "no_numbers_scene"
+text: "You look at your phone but there are no numbers saved in your contacts. You need to find a phone number first."
+connections:
+  1: ["Go back", "intro", []]
+items_granted: []
+items_required: []

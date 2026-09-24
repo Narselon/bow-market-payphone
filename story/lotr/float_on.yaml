@@ -1,0 +1,10 @@
+id: "float_on"
+text: "fingers"
+connections: {}
+disable_star_hash: true
+hidden_connections:
+  "#": "not_numbers"
+  "*": "not_numbers"
+  "default": "fingers"
+items_granted: []
+items_required: []

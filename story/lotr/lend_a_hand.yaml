@@ -1,0 +1,9 @@
+id: "lend a hand"
+text: "aint no hero"
+connections: {}
+hidden_connections:
+  timeout: "hub"
+  default: "hub"
+items_granted: []
+items_required: []
+timeout_after_audio: true 

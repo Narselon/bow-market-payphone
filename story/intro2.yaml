@@ -1,0 +1,20 @@
+id: "intro2"
+text: "I wasn't expecting you to stay on the line. You have been asigned a special agent number so I can identify you if you ever decide to pickup the phone again. To type this code or any other code press star, the code, followed by the pound sign. Before we proceed what is the number on the side of this phone?"
+connections:
+  1: ["Proceed", "intro3", []]
+  2: ["Proceed", "intro3", []]
+  3: ["Proceed", "intro3", []]
+  4: ["Proceed", "intro3", []]
+  5: ["Proceed", "intro3", []]
+  6: ["Proceed", "intro3", []]
+  7: ["Proceed", "intro3", []]
+  8: ["Proceed", "intro3", []]
+  9: ["Proceed", "intro3", []]
+hidden_connections:
+  "0": "hub"
+  "skip": "scene3"
+items_granted: []
+items_required: []
+assigns_new_code: true
+pre_audio: "new_code_pre"
+post_audio: "new_code_post"

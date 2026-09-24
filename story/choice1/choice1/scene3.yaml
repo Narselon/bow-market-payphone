@@ -1,0 +1,3 @@
+id: "scene3"
+text: "You find your uncle in the pit.\n1. Restart"
+connections: ["intro"]

@@ -1,0 +1,10 @@
+id: "Fahrenheit_451"
+text: "Well, we're now in a distant future. How do you know it is the future? Well, the air tastes 'future'y. You spot a house on fire and a book tossed into the bushes. Do you 1 call the fire department or 2 grab the book?"
+connections:
+  1: ["call", "call", []]
+  2: ["grab_book", "grab_book", []]
+hidden_connections:
+  "0": "hub"
+  "skip": "scene3"
+items_granted: []
+items_required: []

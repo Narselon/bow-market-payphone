@@ -1,0 +1,9 @@
+id: "go_home"
+text: "travel with radagast or go home"
+connections: 
+  1: ["climb_tree", "climb_tree", []]
+  2: ["feet", "feet", []]
+hidden_connections:
+  "0": "hub"
+items_granted: []
+items_required: []

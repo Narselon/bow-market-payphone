@@ -1,0 +1,10 @@
+id: "call2"
+text: "Thankyou for calling the Firemen. We already have firemen on the scene Well that's a relief. You see firemen victoriously emerge from the house, giving each other high fives. They look like standard firemen. Red truck, protective clothing, oversized hat, flamethrower--That can't be right. No, that is unmistakably a flamethrower. Perhaps you should have called fire puuter outers instead of firemen. Appreciate the call. Thems bibiophiles am popping up everywhere no matter how many books we burn. You notice the book still in the bushes. Do you 1 hand over the book or 2 try to hide it?"
+connections:
+  1: ["turn_over_book", "turn_over_book", []]
+  2: ["hide_book", "hide_book", []]
+hidden_connections:
+  "0": "hub"
+  "skip": "scene3"
+items_granted: []
+items_required: []

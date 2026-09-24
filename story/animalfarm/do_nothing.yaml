@@ -1,0 +1,9 @@
+id: "do_nothing"
+text: "full tummy"
+connections: {}
+hidden_connections:
+  timeout: "hub"
+  default: "hub"
+items_granted: ["full_tummy"]
+items_required: []
+timeout_after_audio: true 

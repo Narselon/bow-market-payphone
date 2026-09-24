@@ -1,0 +1,9 @@
+id: "turn_over_book"
+text: "You meta burn"
+connections: {}
+hidden_connections:
+  timeout: "hub"
+  default: "hub"
+items_granted: []
+items_required: []
+timeout_after_audio: true 

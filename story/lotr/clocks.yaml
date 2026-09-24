@@ -1,0 +1,9 @@
+id: "clocks"
+text: "another riddle"
+connections: {}
+hidden_connections:
+  "0": "hub"
+  "default": "wrong"
+  "3474": "fish"
+items_granted: []
+items_required: []

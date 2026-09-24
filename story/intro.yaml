@@ -1,0 +1,17 @@
+id: "intro"
+text: "You actually answered. That's a bold move. Since you're on the line I got a mission for you. Press any number if you're cool. Or if you want to be lame just hang up. For any yes or no questions. Press 1 for yes and 2 for no."
+connections:
+  1: ["Proceed", "intro2", []]
+  2: ["Proceed", "intro2", []]
+  3: ["Proceed", "intro2", []]
+  4: ["Proceed", "intro2", []]
+  5: ["Proceed", "intro2", []]
+  6: ["Proceed", "intro2", []]
+  7: ["Proceed", "intro2", []]
+  8: ["Proceed", "intro2", []]
+  9: ["Proceed", "intro2", []]
+hidden_connections:
+  "0": "hub"
+  "skip": "scene3"
+items_granted: []
+items_required: []

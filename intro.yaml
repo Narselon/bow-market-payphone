@@ -1,0 +1,9 @@
+id: "intro"
+text: "Test scenario hub. Press 1 to find an item. Press 2 to go finish the story. Press 0 to return here anytime."
+connections:
+  1: ["find_item", "find_item", []]
+  2: ["ending", "ending", []]
+hidden_connections:
+  "0": "intro"
+items_granted: []
+items_required: []

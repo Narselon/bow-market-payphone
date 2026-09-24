@@ -1,0 +1,3 @@
+id: "scene2"
+text: "You try to call your uncle.\n1. You take out your phone and it slips out of your hand. In an effort to catch it, you fall into a pit."
+connections: ["scene3"]

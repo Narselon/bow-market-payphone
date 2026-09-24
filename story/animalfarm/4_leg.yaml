@@ -1,0 +1,10 @@
+id: "4_leg"
+text: "spoke friend"
+connections: {}
+hidden_connections:
+  "timeout": "friend"
+  "default": "friend"
+items_granted: []
+items_required: []
+timeout_after_audio: true 
+timeout_seconds: 1 

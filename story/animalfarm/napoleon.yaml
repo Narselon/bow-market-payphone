@@ -1,0 +1,11 @@
+id: "napoleon"
+text: "speak up or do nothing"
+connections: {}
+hidden_connections:
+  "0": "hub"
+  timeout: "do_nothing"
+  default: "speak_up"
+items_granted: []
+items_required: []
+timeout_after_audio: true
+timeout_seconds: 6

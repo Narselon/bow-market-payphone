@@ -1,0 +1,10 @@
+id: "human"
+text: "Press 1 for human. 2 for neighbor"
+connections:
+  1: ["shakespeare", "shakespeare", []]
+  2: ["joke", "joke", []]
+hidden_connections:
+  "0": "hub"
+  "skip": "scene3"
+items_granted: []
+items_required: []

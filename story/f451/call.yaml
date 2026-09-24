@@ -1,0 +1,10 @@
+id: "call"
+text: "You take a seashell out of your pocket. It allows you to communicate without wires. That's futuristic, right? What? You already have those? How am I supposed to know that? I am a disembodied voice in a payphone. I don't get out much. While you were graciously correcting me, a fire rages on. So are you 1 gonna call or 2 look at that book in defiance?"
+connections:
+  1: ["call2", "call2", []]
+  2: ["grab_book", "grab_book", []]
+hidden_connections:
+  "0": "hub"
+  "skip": "scene3"
+items_granted: []
+items_required: []

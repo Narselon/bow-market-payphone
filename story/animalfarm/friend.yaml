@@ -1,0 +1,10 @@
+id: "friend"
+text: "Snowball or Napoleon"
+connections:
+  1: ["snowball", "snowball", []]
+  2: ["napoleon", "napoleon", []]
+hidden_connections:
+  "0": "hub"
+  "skip": "scene3"
+items_granted: []
+items_required: []

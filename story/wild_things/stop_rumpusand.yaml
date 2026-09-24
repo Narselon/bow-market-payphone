@@ -1,0 +1,9 @@
+id: "stop_rumpusand"
+text: "home with dinner and sand"
+connections: {}
+hidden_connections:
+  timeout: "hub"
+  default: "hub"
+timeout_after_audio: true 
+items_granted: ["wild", "sand"]
+items_required: ["sand"]

@@ -1,0 +1,9 @@
+id: "stand_your_ground"
+text: "stand your ground but then orcs"
+connections: {}
+hidden_connections:
+  timeout: "orcs"
+  default: "orcs"
+items_granted: []
+items_required: []
+timeout_after_audio: true 

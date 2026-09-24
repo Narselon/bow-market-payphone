@@ -1,0 +1,7 @@
+id: "ending"
+text: "Congratulations, agent - you finished the test scenario! This code is now retired."
+connections: {}
+hidden_connections: {}
+items_granted: ["plothole"]
+items_required: []
+is_ending: true

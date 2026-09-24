@@ -1,0 +1,9 @@
+id: "murdermind"
+text: "not much choice, riddle"
+connections: 
+  1: ["not_much_choice", "not_much_choice", []]
+  2: ["riddle", "riddle", []]
+hidden_connections:
+  "0": "hub"
+items_granted: []
+items_required: []

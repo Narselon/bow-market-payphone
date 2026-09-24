@@ -1,0 +1,41 @@
+id: "hub"
+text: "You're back. Press 1 to enter Farhenheit 451. 2 for Lord of the Rings. 3 for Animal Farm. 4 for Where the Wild Things Are. Or enter the code to assemble the plot device. You may press 0 at any time to return here at any time."
+connections:
+  1: ["Fahrenheit_451", "Fahrenheit_451", []]
+  2: ["Lord_of_the-Rings", "Lord_of_the_Rings", []]
+  3: ["Animal_Farm", "Animal_Farm", []]
+  4: ["Where_the_Wild_Things_Are", "Where_the_Wild_Things_Are", []]
+hidden_connections:
+  "0": "hub"
+  "451746494533255": "plotdevice_check"
+  "451746432559453": "plotdevice_check"
+  "451945374643255": "plotdevice_check"
+  "451945332557464": "plotdevice_check"
+  "451325574649453": "plotdevice_check"
+  "451325594537464": "plotdevice_check"
+  "746445194533255": "plotdevice_check"
+  "746445132559453": "plotdevice_check"
+  "746494534513255": "plotdevice_check"
+  "746494533255451": "plotdevice_checke"
+  "746432554519453": "plotdevice_check"
+  "746432559453451": "plotdevice_check"
+  "945345174643255": "plotdevice_check"
+  "945345132557464": "plotdevice_check"
+  "945374644513255": "plotdevice_check"
+  "945374643255451": "plotdevice_check"
+  "945332554517464": "plotdevice_check"
+  "945332557464451": "plotdevice_check"
+  "325545174649453": "plotdevice_check"
+  "325545194537464": "plotdevice_check"
+  "325574644519453": "plotdevice_check"
+  "325574649453451": "plotdevice_check"
+  "325594534517464": "plotdevice_check"
+  "325594537464451": "plotdevice_check"
+  "timeout": {
+    "ring,wild,451,full_tummy": "plotdevice",  
+    "ring,wild,451,full_tummy,sand": "plotdevice_sand"      
+  }
+items_granted: []
+items_required: []
+timeout_after_audio: true
+timeout_seconds: 5

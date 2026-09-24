@@ -1,0 +1,12 @@
+id: "plotdevice_sand"
+text: "choose the plot hole with sand"
+connections:
+  1: ["imposterbook", "imposterbook", []]
+  2: ["suspension", "suspension", []]
+  3: ["paradox", "paradox", []]
+  4: ["pocketsand", "pocketsand", []]
+hidden_connections:
+  "0": "hub"
+  "skip": "scene3"
+items_granted: []
+items_required: []

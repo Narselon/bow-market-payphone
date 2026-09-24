@@ -1,0 +1,10 @@
+id: "stardew"
+text: "1 research. 2 unfair"
+connections:
+  1: ["research", "research", []]
+  2: ["unfair", "unfair", []]
+hidden_connections:
+  "0": "hub"
+  "skip": "scene3"
+items_granted: []
+items_required: []

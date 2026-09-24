@@ -1,0 +1,9 @@
+id: "climb_down"
+text: "tom or press home"
+connections: 
+  9: ["follow_tom", "follow_tom", []]
+  5: ["press_home", "press_home", []]
+hidden_connections:
+  "0": "hub"
+items_granted: []
+items_required: []

@@ -1,0 +1,9 @@
+id: "feet"
+text: "just walk home"
+connections: {}
+hidden_connections:
+  timeout: "hub"
+  default: "hub"
+items_granted: ["ring"]
+items_required: []
+timeout_after_audio: true 

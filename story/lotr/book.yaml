@@ -1,0 +1,9 @@
+id: "book"
+text: "choose a riddle"
+connections:
+  1: ["barrel", "barrel", []]
+  2: ["clocks", "clocks", []] 
+hidden_connections:
+  "0": "hub"
+items_granted: []
+items_required: []

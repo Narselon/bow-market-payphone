@@ -1,0 +1,9 @@
+id: "2_leg"
+text: "same as humans"
+connections: {}
+hidden_connections:
+  timeout: "hub"
+  default: "hub"
+items_granted: []
+items_required: []
+timeout_after_audio: true 

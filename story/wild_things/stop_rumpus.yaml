@@ -1,0 +1,9 @@
+id: "stop_rumpus"
+text: "home with dinner"
+connections: {}
+hidden_connections:
+  timeout: "hub"
+  default: "hub"
+timeout_after_audio: true
+items_granted: ["wild"]
+items_required: []

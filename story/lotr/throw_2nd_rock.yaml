@@ -1,0 +1,9 @@
+id: "throw_2nd_rock"
+text: "murder on mind, threaten"
+connections: 
+  1: ["murdermind", "murdermind", []]
+  2: ["threaten", "threaten", []]
+hidden_connections:
+  "0": "hub"
+items_granted: []
+items_required: []

@@ -1,0 +1,10 @@
+id: "grab_book"
+text: "You grab the book. It looks to be a book. A fire continues to rage at the house. Not your problem though. You have a book. Maybe that's part of the natural lifecycle of a house. It is the future afterall. A man exits the house dressed like a firefighter, except he is carrying a flamethrower. Ah, nothing like a long day burning books to save society Burning books? But you're holding a book. Do you 1 turn over the book or 2 attempt to hide it?"
+connections:
+  1: ["turn_over_book", "turn_over_book", []]
+  2: ["hide_book", "hide_book", []]
+hidden_connections:
+  "0": "hub"
+  "skip": "scene3"
+items_granted: []
+items_required: []

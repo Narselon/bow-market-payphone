@@ -1,0 +1,9 @@
+id: "suspension"
+text: "suspension"
+connections: {}
+hidden_connections:
+  timeout: "plotdevice"
+  default: "plotdevice"
+timeout_after_audio: true
+items_granted: []
+items_required: []

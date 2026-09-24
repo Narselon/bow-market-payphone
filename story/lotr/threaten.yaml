@@ -1,0 +1,9 @@
+id: "threaten"
+text: "threaten but then orcs"
+connections:
+  1: ["stand_your_ground", "stand_your_ground", []]
+  2: ["gollum_run", "gollum_run", []] 
+hidden_connections:
+  "0": "hub"
+items_granted: []
+items_required: []

@@ -1,0 +1,10 @@
+id: "Animal_Farm"
+text: "Press 1 for human. 2 for neighbor"
+connections:
+  1: ["human", "human", []]
+  2: ["neighbor", "neighbor", []]
+hidden_connections:
+  "0": "hub"
+  "skip": "scene3"
+items_granted: []
+items_required: []

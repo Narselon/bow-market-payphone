@@ -1,0 +1,16 @@
+id: "wildthingsbook"
+text: "incorrect"
+connections: {}
+hidden_connections:
+  timeout:
+    "animalfarmbook,451book,lotrbook,wildthingsbook": "all_banned"  # Triggers if player has all 4 keys
+    "wildthingsbook": "imposterbook"  # Return to same scene if not
+    default: "imposterbook"  # Return to same scene if not
+  default:
+    "animalfarmbook,451book,lotrbook,wildthingsbook": "all_banned"  # Triggers if player has all 4 keys
+    "wildthingsbook": "imposterbook"  # Return to same scene if not
+    default: "imposterbook"
+items_granted: ["wildthingsbook"]
+items_required: []
+timeout_after_audio: true
+timeout_seconds: 3 

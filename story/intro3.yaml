@@ -1,0 +1,39 @@
+id: "intro3"
+text: "This doesn't look right. This is not the musical section this is the banned book section. This is where the most dangerous ideas are kept deemed too subversive are kept. These books are so controversal that they are literally forbidden in some parts of the country. Curse you homonyms! I need you to stay calm. You're gonna have to infiltrate the world of the banned books and retrieve piecesof Dr. Stori's plot device so we can open up a plot hole and escape. Press 1 to enter Farhenheit 451. 2 for Lord of the Rings. 3 for Animal Farm. 4 for Where the Wild Things Are. Or enter the code to assemble the plot device. You may press 0 at any time to return here at any time."
+connections:
+  1: ["Fahrenheit_451", "Fahrenheit_451", []]
+  2: ["Lord_of_the-Rings", "Lord_of_the_Rings", []]
+  3: ["Animal_Farm", "Animal_Farm", []]
+  4: ["Where_the_Wild_Things_Are", "Where_the_Wild_Things_Are", []]
+hidden_connections:
+  "0": "hub"
+  "451746494533255": "plotdevice"
+  "451746432559453": "plotdevice"
+  "451945374643255": "plotdevice"
+  "451945332557464": "plotdevice"
+  "451325574649453": "plotdevice"
+  "451325594537464": "plotdevice"
+  "746445194533255": "plotdevice"
+  "746445132559453": "plotdevice"
+  "746494534513255": "plotdevice"
+  "746494533255451": "plotdevice"
+  "746432554519453": "plotdevice"
+  "746432559453451": "plotdevice"
+  "945345174643255": "plotdevice"
+  "945345132557464": "plotdevice"
+  "945374644513255": "plotdevice"
+  "945374643255451": "plotdevice"
+  "945332554517464": "plotdevice"
+  "945332557464451": "plotdevice"
+  "325545174649453": "plotdevice"
+  "325545194537464": "plotdevice"
+  "325574644519453": "plotdevice"
+  "325574649453451": "plotdevice"
+  "325594534517464": "plotdevice"
+  "325594537464451": "plotdevice"
+  timeout: {
+    "ring,wild,451,full_tummy": "plotdevice",  
+    "ring,wild,451,full_tummy,sand": "plotdevice_sand"      
+  }
+items_granted: []
+items_required: []

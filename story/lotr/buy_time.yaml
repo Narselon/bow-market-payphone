@@ -1,0 +1,9 @@
+id: "buy_time"
+text: "toss 2nd rock or reason"
+connections: 
+  2: ["throw_2nd_rock", "throw_2nd_rock", []]
+  3: ["reason", "reason", []]
+hidden_connections:
+  "0": "hub"
+items_granted: []
+items_required: []

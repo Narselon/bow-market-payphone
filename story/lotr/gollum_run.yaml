@@ -1,0 +1,9 @@
+id: "gollum_run"
+text: "try running find orcs"
+connections: {}
+hidden_connections:
+  timeout: "orcs"
+  default: "orcs"
+items_granted: []
+items_required: []
+timeout_after_audio: true 

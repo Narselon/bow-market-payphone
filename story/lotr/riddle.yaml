@@ -1,0 +1,9 @@
+id: "riddle"
+text: "Eggs or not"
+connections: {}
+hidden_connections:
+  "0": "hub"
+  "default": "dont_understand"
+  "3447": "eggs"
+items_granted: []
+items_required: []

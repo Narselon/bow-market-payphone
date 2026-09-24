@@ -1,0 +1,10 @@
+id: "hide_book"
+text: "You quickly try to hide the book in your jacket. Hey whatcha put in your jacket? That a book? Do you 1 tell the fireman it was a novelty box of tissues that only resembles a book or 2 gaslight him into thinking nothing happened?"
+connections:
+  1: ["tissues", "tissues", []]
+  2: ["gaslight", "gaslight", []]
+hidden_connections:
+  "0": "hub"
+  "skip": "scene3"
+items_granted: []
+items_required: []

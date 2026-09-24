@@ -1,0 +1,9 @@
+id: "radagast"
+text: "animals or trees"
+connections: 
+  1: ["animals", "animals", []]
+  2: ["trees", "trees", []]
+hidden_connections:
+  "0": "hub"
+items_granted: []
+items_required: []

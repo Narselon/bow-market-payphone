@@ -1,0 +1,9 @@
+id: "runsand"
+text: "empty stomach with sand"
+connections: {}
+hidden_connections:
+  timeout: "hub"
+  default: "hub"
+items_granted: ["sand"]
+items_required: ["sand"]
+timeout_after_audio: true 

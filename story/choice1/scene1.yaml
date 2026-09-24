@@ -1,0 +1,7 @@
+id: "scene1"
+text: "You fall in a pit. It's dark, but fortunately you have a flashlight.\n1. Call for help\n2. Use your flashlight to look around"
+connections:
+  1: ["Call for help", "scene3", []]
+  2: ["Use flashlight", "scene4", ["flashlight"]]
+items_granted: ["rope"]
+items_required: ["flashlight"]

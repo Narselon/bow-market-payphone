@@ -1,0 +1,12 @@
+id: "imposterbook"
+text: "choose the plot hole"
+connections:
+  1: ["451book", "451book", []]
+  2: ["animalfarmbook", "animalfarmbook", []]
+  3: ["lotrbook", "lotrbook", []]
+  4: ["wildthingsbook", "wildthingsbook", []]
+hidden_connections:
+  "0": "plotdevice"
+  "skip": "scene3"
+items_granted: []
+items_required: []

@@ -1,0 +1,10 @@
+id: "Lord_of_the_Rings"
+text: "1 investigate. 2 float on"
+connections:
+  1: ["investigate", "investigate", []]
+  2: ["float_on", "float_on", []]
+hidden_connections:
+  "0": "hub"
+  "skip": "scene3"
+items_granted: []
+items_required: []

@@ -1,0 +1,10 @@
+id: "hide"
+text: "raft run or fight"
+connections:
+  1: ["raft", "raft", []]
+  2: ["runfield", "runfield", []] 
+  3: ["fight", "fight", []]   
+hidden_connections:
+  "0": "hub"
+items_granted: []
+items_required: []

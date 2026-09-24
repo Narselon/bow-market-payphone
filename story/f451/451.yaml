@@ -1,0 +1,9 @@
+id: "451"
+text: "451. That's the same code a fireman uses for his luggage. The hound stops searching and sits obediantly. A compartment opens up and you slide the book inside. The hound runs off with a copy of Battlefield Earth in tow for someone to 'enjoy'. Congratulations you saved literature. Maybe? You may return to the hub by pressing 0. You may present the code 451 to the librarian for a piece of the plot device."
+connections: {}
+hidden_connections:
+  timeout: "hub"
+  default: "hub"
+items_granted: ["451"]
+items_required: []
+timeout_after_audio: true 

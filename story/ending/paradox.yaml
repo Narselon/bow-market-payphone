@@ -1,0 +1,7 @@
+id: "paradox"
+text: "paradox"
+connections: {}
+hidden_connections:
+  "default": "plotdevice"
+items_granted: ["plothole"]
+items_required: []

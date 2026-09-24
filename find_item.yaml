@@ -1,0 +1,10 @@
+id: "find_item"
+text: "You found a test widget."
+connections: {}
+hidden_connections:
+  timeout: "intro"
+  default: "intro"
+items_granted: ["widget"]
+items_required: []
+timeout_after_audio: false
+timeout_seconds: 3
