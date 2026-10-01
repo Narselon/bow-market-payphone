@@ -4,6 +4,7 @@ import keypad
 import time
 import save_manager
 import code_audio
+from datetime import datetime
 from scene_audio import SceneAudio
 
 # Try to import payphone, but handle errors gracefully.
@@ -20,11 +21,47 @@ except Exception as e:
     payphone = DummyPayphone()
 
 
+DAY_NAMES = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+
+
+def is_within_time_window(window):
+    """window: {'days': [...] (optional), 'start': 'HH:MM' (optional),
+    'end': 'HH:MM' (optional)}. Missing 'days' means any day is fine.
+    Missing start/end means no time-of-day restriction. Uses local system
+    time — make sure the Pi's clock is correct/NTP-synced once deployed.
+    A start > end window (e.g. 22:00-02:00) is treated as wrapping past
+    midnight."""
+    if not window:
+        return True
+    now = datetime.now()
+
+    days = window.get("days")
+    if days:
+        today = DAY_NAMES[now.weekday()]
+        if today not in [d.lower() for d in days]:
+            return False
+
+    start = window.get("start")
+    end = window.get("end")
+    if start and end:
+        start_h, start_m = map(int, start.split(":"))
+        end_h, end_m = map(int, end.split(":"))
+        start_minutes = start_h * 60 + start_m
+        end_minutes = end_h * 60 + end_m
+        now_minutes = now.hour * 60 + now.minute
+        if start_minutes <= end_minutes:
+            return start_minutes <= now_minutes <= end_minutes
+        else:
+            return now_minutes >= start_minutes or now_minutes <= end_minutes
+
+    return True
+
+
 class Scene:
     def __init__(self, id, text, connections, hidden_connections=None, items_granted=None,
                  items_required=None, timeout_after_audio=False, timeout_seconds=3,
                  disable_star_hash=False, is_ending=False, pre_audio=None, post_audio=None,
-                 assigns_new_code=False):
+                 assigns_new_code=False, time_required=None, connection_time_windows=None):
         self.id = id
         self.text = text
         self.connections = connections
@@ -43,6 +80,13 @@ class Scene:
         # If true, the engine mints a fresh code the moment a player
         # transitions into this scene (see start_new_session()).
         self.assigns_new_code = assigns_new_code
+        # time_required: gates entering this scene AT ALL to a day/time
+        # window, exactly like items_required gates it to inventory items.
+        self.time_required = time_required
+        # connection_time_windows: {"5": {...window...}} — gates a single
+        # numbered choice (matching the connections dict) to a day/time
+        # window, independent of whether the scene itself is gated.
+        self.connection_time_windows = connection_time_windows if connection_time_windows else {}
 
     def display(self, inventory):
         print("-" * 50)
@@ -88,6 +132,13 @@ class Scene:
             choice_index = int(choice)
             if choice_index in self.connections:
                 connection_data = self.connections[choice_index]
+
+                window = self.connection_time_windows.get(str(choice_index))
+                if window and not is_within_time_window(window):
+                    alt_scene_id = connection_data[3] if len(connection_data) > 3 else None
+                    if alt_scene_id:
+                        return alt_scene_id, None
+                    return None, "That's not available right now."
 
                 if len(connection_data) >= 2 and not isinstance(connection_data[1], dict):
                     target_scene_id = connection_data[1]
@@ -178,7 +229,9 @@ def load_scenes():
                     is_ending=data.get("is_ending", False),
                     pre_audio=data.get("pre_audio"),
                     post_audio=data.get("post_audio"),
-                    assigns_new_code=data.get("assigns_new_code", False)
+                    assigns_new_code=data.get("assigns_new_code", False),
+                    time_required=data.get("time_required"),
+                    connection_time_windows={str(k): v for k, v in data.get("connection_time_windows", {}).items()}
                 )
                 print(f"Loaded scene: {data['id']} from {filepath}")
         except Exception as e:
@@ -250,22 +303,6 @@ def start_new_session(scenes, scene_audio):
     code_audio.play_code_sequence(pre, code, post, scene_audio.scene_channel)
     return code, "hub", set()
 
-def start_new_session_with_intro2(scenes, scene_audio):
-    """Generates a fresh code, saves an empty session for it, and speaks it
-    back to the player using the 'intro2' scene's pre/post clips. Lands the player on 'intro2'.
-    Returns (code, current_scene, inventory)."""
-    code = save_manager.generate_unique_code()
-    save_manager.save(code, "intro2", [])
-    print(f"New code generated: {code}")
-
-    intro2_scene = scenes.get("intro2")
-    pre = intro2_scene.pre_audio if intro2_scene else None
-    post = intro2_scene.post_audio if intro2_scene else None
-    if intro2_scene:
-        print(intro2_scene.text)
-
-    code_audio.play_code_sequence(pre, code, post, scene_audio.scene_channel)
-    return code, "intro2", set()
 
 def main():
     scenes = load_scenes()
@@ -313,6 +350,12 @@ def main():
             if not all(item in inventory for item in scene.items_required):
                 missing_items = [item for item in scene.items_required if item not in inventory]
                 print(f"You can't go there yet. You need: {', '.join(missing_items)}")
+                time.sleep(2)
+                current_scene = previous_scene if previous_scene else "intro"
+                continue
+
+            if scene.time_required and not is_within_time_window(scene.time_required):
+                print("This isn't available right now.")
                 time.sleep(2)
                 current_scene = previous_scene if previous_scene else "intro"
                 continue
@@ -399,10 +442,7 @@ def main():
                 next_scene_obj = scenes.get(current_scene)
 
                 if next_scene_obj and next_scene_obj.assigns_new_code and code is None:
-                    if current_scene == "intro2":
-                        code, current_scene, inventory = start_new_session_with_intro2(scenes, scene_audio)
-                    else:
-                        code, current_scene, inventory = start_new_session(scenes, scene_audio)
+                    code, current_scene, inventory = start_new_session(scenes, scene_audio)
                     save_manager.save(code, current_scene, inventory)
                 elif next_scene_obj and next_scene_obj.is_ending:
                     save_manager.archive(code, current_scene, inventory)

@@ -211,13 +211,24 @@ def keyboard_input_thread():
                 time.sleep(0.01)
                     
             else:
-                # Fallback to keyboard input if no GPIO
-                keyboard_input = input().strip().lower()
-                if keyboard_input and len(keyboard_input) == 1:
-                    if keyboard_input in KEYPAD_SOUNDS:
-                        play_keypad_sound(keyboard_input)
+                # Fallback to keyboard input if no GPIO. Accepts a whole
+                # typed line (e.g. "204969#") and feeds it through as a
+                # sequence of individual keypresses, matching how a real
+                # keypad delivers one key at a time — so testers don't have
+                # to hit Enter after every single digit.
+                line = input().strip().lower()
+                for ch in line:
+                    if _should_stop:
+                        return
+                    keyboard_input = ch
+                    if ch in KEYPAD_SOUNDS:
+                        play_keypad_sound(ch)
                     input_ready.set()
-                    # Don't break - wait for next input
+                    # Wait for this key to be consumed before sending the next
+                    while input_ready.is_set():
+                        if _should_stop:
+                            return
+                        time.sleep(0.02)
                     
     except (EOFError, KeyboardInterrupt):
         _should_stop = True
@@ -299,12 +310,6 @@ def wait_for_keypress():
                 CODE_ENTRY_MODE = False
                 input_buffer = ""
                 continue
-            elif key == '0':
-                # '0' always escapes code entry and returns to hub
-                print("Code entry cancelled by '0'")
-                CODE_ENTRY_MODE = False
-                input_buffer = ""
-                return '0'
             else:
                 # Add to code buffer
                 input_buffer += key
